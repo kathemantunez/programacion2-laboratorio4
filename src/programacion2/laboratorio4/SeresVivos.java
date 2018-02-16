@@ -9,7 +9,7 @@ package programacion2.laboratorio4;
  *
  * @author KATHERINE
  */
-public class SeresVivos {
+public abstract class SeresVivos {
     private String nombre;
     private String gruposangre;
     private String sexo;
@@ -71,7 +71,9 @@ public class SeresVivos {
     public String toString() {
         return "SeresVivos{" + "nombre=" + nombre + ", gruposangre=" + gruposangre + ", sexo=" + sexo + ", altura=" + altura + ", peso=" + peso + '}';
     }
-    
+     public abstract void cafe();
+     
+     public abstract void comida();
     
 }
 

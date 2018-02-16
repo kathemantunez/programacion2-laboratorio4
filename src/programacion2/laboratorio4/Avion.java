@@ -11,12 +11,12 @@ package programacion2.laboratorio4;
  */
 public class Avion  extends Aereo{
     private String Pasajeros;
-    private boolean PilotoAutomatico;
+    private String PilotoAutomatico;
 
     public Avion() {
     }
 
-    public Avion(String Pasajeros, boolean PilotoAutomatico, String Gasolina, String PaisdePartida, String PaisdeLlegada, String Tanque, String Distancia, String Altitud) {
+    public Avion(String Pasajeros, String PilotoAutomatico, String Gasolina, String PaisdePartida, String PaisdeLlegada, String Tanque, String Distancia, String Altitud) {
         super(Gasolina, PaisdePartida, PaisdeLlegada, Tanque, Distancia, Altitud);
         this.Pasajeros = Pasajeros;
         this.PilotoAutomatico = PilotoAutomatico;
@@ -30,11 +30,11 @@ public class Avion  extends Aereo{
         this.Pasajeros = Pasajeros;
     }
 
-    public boolean isPilotoAutomatico() {
+    public String isPilotoAutomatico() {
         return PilotoAutomatico;
     }
 
-    public void setPilotoAutomatico(boolean PilotoAutomatico) {
+    public void setPilotoAutomatico(String PilotoAutomatico) {
         this.PilotoAutomatico = PilotoAutomatico;
     }
 
