@@ -55,6 +55,7 @@ public class Espacial extends MediosdeTransporte{
     @Override
     public void combustibles() {
       
+        
     }
     
     
