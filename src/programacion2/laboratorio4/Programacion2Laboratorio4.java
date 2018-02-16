@@ -18,7 +18,7 @@ public class Programacion2Laboratorio4 {
     static Aereo aereo = new Aereo();
     static ArrayList<Primates> primate = new ArrayList();
     static Mono_Baboon mono = new Mono_Baboon();
-    Queue<Integer> cola=new LinkedList();
+    Queue<Integer> cola = new LinkedList();
 
     /**
      * @param args the command line arguments
@@ -108,177 +108,42 @@ public class Programacion2Laboratorio4 {
 
     }
 
-<<<<<<< HEAD
-
-    
-   
-
-//    private static void transportes() {
-//        String menu;
-//        do {
-//             menu = JOptionPane.showInputDialog("+-+TRANSPORTES+-+"
-//                    + "a. Crear"
-//                    + "b. Listar"
-//                    + "c. Modificar"
-//                    + "d. Eliminar"
-//                    + "e. Salir");
-//            String Menu2;
-//            String Menu3;
-//            do {
-//                Menu2 = JOptionPane.showInputDialog("DESEA CREAR"
-//                        + "a. Aereo Nave Normal"
-//                        + "b. Espacial");
-//                if (Menu2.equalsIgnoreCase("a")) {
-//                    String gasolina = "";
-//                    int Tipo = 0;
-//                    do {
-//                        Menu3 = JOptionPane.showInputDialog("Aereo Nave"
-//                                + "a. Helicoptero"
-//                                + "b. Avion");
-//                    } while (!Menu3.equalsIgnoreCase("a") || !Menu3.equalsIgnoreCase("b"));
-//                    if (Menu3.equalsIgnoreCase("a")) {
-//                        Tipo = 1;
-//                    } else if (Menu3.equalsIgnoreCase("b")) {
-//                        Tipo = 2;
-//                    }
-//
-//
-//            switch (menu) {
-//                case "a":
-//                    String Menu2;
-//                    String Menu3;
-//
-//                    do {
-//                        Menu3 = JOptionPane.showInputDialog("Tipo de Gasolina."
-//                                + "a. Super"
-//                                + "b. Regular"
-//                                + "c. Diesel");
-//                    } while (!Menu3.equalsIgnoreCase("a") || !Menu3.equalsIgnoreCase("b") || !Menu3.equalsIgnoreCase("c"));
-//                    if (Menu3.equalsIgnoreCase("a")) {
-//                        gasolina = "Super";
-//                    } else if (Menu3.equalsIgnoreCase("b")) {
-//                        gasolina = "Regular";
-//                    } else if (Menu3.equalsIgnoreCase("c")) {
-//                        gasolina = "Diesel";
-//                    }
-//
-//                    if (Tipo == 1) {
-//                        String helices = JOptionPane.showInputDialog("Helices:");
-//                        String patas = JOptionPane.showInputDialog("Patas:");
-//                        String partida = JOptionPane.showInputDialog("Pais de partida:");
-//                        String llegada = JOptionPane.showInputDialog("Pais de llegada:");
-//                        String tanque = "Lleno";
-//                        String distancia = JOptionPane.showInputDialog("Distancia que recorre con tanque lleno:");
-//                        String altitud = JOptionPane.showInputDialog("Altitud:");
-//                        Transportes.add(new Helicoptero(helices, patas, gasolina, partida, llegada, tanque, distancia, altitud));
-//                    } else if (Tipo == 2) {
-//                        String pasajeros = JOptionPane.showInputDialog("Numero de Pasajeros:");
-//                        String piloto = "";
-//                        do {
-//                            Menu3 = JOptionPane.showInputDialog("Funciona el piloto automatico?");
-//                        } while (!Menu3.equalsIgnoreCase("si") || !Menu3.equalsIgnoreCase("no"));
-//                        if (Menu3.equalsIgnoreCase("si")) {
-//                            piloto = "SI";
-//                        } else if (Menu3.equalsIgnoreCase("no")) {
-//                            piloto = "NO";
-//                        }
-//                        String partida = JOptionPane.showInputDialog("Pais de partida:");
-//                        String llegada = JOptionPane.showInputDialog("Pais de llegada:");
-//                        String tanque = "Lleno";
-//                        String distancia = JOptionPane.showInputDialog("Distancia que recorre con tanque lleno:");
-//                        String altitud = JOptionPane.showInputDialog("Altitud:");
-//                        Transportes.add(new Avion(pasajeros, piloto, gasolina, partida, llegada, tanque, distancia, altitud));
-//                    }
-//
-//
-//            }
-//
-//        } while (!menu.equalsIgnoreCase("e"));
-//
-//                }
-//                if (Menu2.equalsIgnoreCase("b")) {
-//                    String gasolina = "";
-//                    int Tipo = 0;
-//                    do {
-//                        Menu3 = JOptionPane.showInputDialog("Espacial"
-//                                + "a. Nave Espacial"
-//                                + "b. Cohete");
-//                    } while (!Menu3.equalsIgnoreCase("a") || !Menu3.equalsIgnoreCase("b"));
-//                    if (Menu3.equalsIgnoreCase("a")) {
-//                        Tipo = 1;
-//                    } else if (Menu3.equalsIgnoreCase("b")) {
-//                        Tipo = 2;
-//                    }
-//                    do {
-//                        Menu3 = JOptionPane.showInputDialog("Tipo de Gasolina."
-//                                + "a. Quimico"
-//                                + "b. Solido"
-//                                + "c. Propelente Liquido");
-//                    } while (!Menu3.equalsIgnoreCase("a") || !Menu3.equalsIgnoreCase("b") || !Menu3.equalsIgnoreCase("c"));
-//                    if (Menu3.equalsIgnoreCase("a")) {
-//                        gasolina = "Quimico";
-//                    } else if (Menu3.equalsIgnoreCase("b")) {
-//                        gasolina = "Solido";
-//                    } else if (Menu3.equalsIgnoreCase("c")) {
-//                        gasolina = "Propelente Liquido";
-//                    }
-//
-//                    if (Tipo == 1) {
-//                        String propulsores = JOptionPane.showInputDialog("Numero de propulsores:");
-//                        String partida = JOptionPane.showInputDialog("Planeta de partida:");
-//                        String llegada = JOptionPane.showInputDialog("Planeta de llegada:");
-//                        Transportes.add(new Nave(propulsores, gasolina, partida, llegada));
-//
-//                    } else if (Tipo == 2) {
-//                        String separaciones = JOptionPane.showInputDialog("Numero de separaciones:");
-//                        String partida = JOptionPane.showInputDialog("Planeta de partida:");
-//                        String llegada = JOptionPane.showInputDialog("Planeta de llegada:");
-//                        Transportes.add(new Cohete(separaciones, gasolina, partida, llegada));
-//                    }
-//
-//                }
-//            } while (!Menu2.equalsIgnoreCase("a") || !Menu2.equalsIgnoreCase("b"));
-//        } while (!Menu.equalsIgnoreCase("e"));
-    
-=======
     private static void transportes() {
         String menu;
         String Menu2 = "";
-        String Menu3;
+        String Menu3 = "";
         String gasolina = "";
         int Tipo = 0;
         do {
-            menu = JOptionPane.showInputDialog("+-+TRANSPORTES+-+"
-                    + "a. Crear"
-                    + "b. Listar"
-                    + "c. Modificar"
-                    + "d. Eliminar"
-                    + "e. Salir");
+            menu = JOptionPane.showInputDialog("+-+TRANSPORTES+-+\n"
+                    + "a. Crear\n"
+                    + "b. Listar\n"
+                    + "c. Modificar\n"
+                    + "d. Eliminar\n"
+                    + "e. Salir\n");
             switch (menu) {
                 case "a":
-                    do {
-                        Menu2 = JOptionPane.showInputDialog("DESEA CREAR"
-                                + "a. Aereo Nave Normal"
-                                + "b. Espacial");
-                        if (Menu2.equalsIgnoreCase("a")) {
 
-                            do {
-                                Menu3 = JOptionPane.showInputDialog("Aereo Nave"
-                                        + "a. Helicoptero"
-                                        + "b. Avion");
-                            } while (!Menu3.equalsIgnoreCase("a") || !Menu3.equalsIgnoreCase("b"));
+                    Menu2 = JOptionPane.showInputDialog("DESEA CREAR\n"
+                            + "a. Aereo Nave Normal\n"
+                            + "b. Espacial\n");
+                    if (Menu2.equalsIgnoreCase("a")) {
+                        do {
+                            Menu3 = JOptionPane.showInputDialog("Aereo Nave\n"
+                                    + "a. Helicoptero\n"
+                                    + "b. Avion\n");
                             if (Menu3.equalsIgnoreCase("a")) {
                                 Tipo = 1;
                             } else if (Menu3.equalsIgnoreCase("b")) {
                                 Tipo = 2;
                             }
+                        } while (Tipo < 1);
 
-                            do {
-                                Menu3 = JOptionPane.showInputDialog("Tipo de Gasolina."
-                                        + "a. Super"
-                                        + "b. Regular"
-                                        + "c. Diesel");
-                            } while (!Menu3.equalsIgnoreCase("a") || !Menu3.equalsIgnoreCase("b") || !Menu3.equalsIgnoreCase("c"));
+                        do {
+                            Menu3 = JOptionPane.showInputDialog("Tipo de Gasolina.\n"
+                                    + "a. Super\n"
+                                    + "b. Regular\n"
+                                    + "c. Diesel\n");
                             if (Menu3.equalsIgnoreCase("a")) {
                                 gasolina = "Super";
                             } else if (Menu3.equalsIgnoreCase("b")) {
@@ -286,55 +151,55 @@ public class Programacion2Laboratorio4 {
                             } else if (Menu3.equalsIgnoreCase("c")) {
                                 gasolina = "Diesel";
                             }
+                        } while (gasolina.equals(""));
 
-                            if (Tipo == 1) {
-                                String helices = JOptionPane.showInputDialog("Helices:");
-                                String patas = JOptionPane.showInputDialog("Patas:");
-                                String partida = JOptionPane.showInputDialog("Pais de partida:");
-                                String llegada = JOptionPane.showInputDialog("Pais de llegada:");
-                                String tanque = "Lleno";
-                                String distancia = JOptionPane.showInputDialog("Distancia que recorre con tanque lleno:");
-                                String altitud = JOptionPane.showInputDialog("Altitud:");
-                                Transportes.add(new Helicoptero(helices, patas, gasolina, partida, llegada, tanque, distancia, altitud));
-                            } else if (Tipo == 2) {
-                                String pasajeros = JOptionPane.showInputDialog("Numero de Pasajeros:");
-                                String piloto = "";
-                                do {
-                                    Menu3 = JOptionPane.showInputDialog("Funciona el piloto automatico?");
-                                } while (!Menu3.equalsIgnoreCase("si") || !Menu3.equalsIgnoreCase("no"));
-                                if (Menu3.equalsIgnoreCase("si")) {
-                                    piloto = "SI";
-                                } else if (Menu3.equalsIgnoreCase("no")) {
-                                    piloto = "NO";
-                                }
-                                String partida = JOptionPane.showInputDialog("Pais de partida:");
-                                String llegada = JOptionPane.showInputDialog("Pais de llegada:");
-                                String tanque = "Lleno";
-                                String distancia = JOptionPane.showInputDialog("Distancia que recorre con tanque lleno:");
-                                String altitud = JOptionPane.showInputDialog("Altitud:");
-                                Transportes.add(new Avion(pasajeros, piloto, gasolina, partida, llegada, tanque, distancia, altitud));
+                        if (Tipo == 1) {
+                            String helices = JOptionPane.showInputDialog("Helices:");
+                            String patas = JOptionPane.showInputDialog("Patas:");
+                            String partida = JOptionPane.showInputDialog("Pais de partida:");
+                            String llegada = JOptionPane.showInputDialog("Pais de llegada:");
+                            String tanque = "Lleno";
+                            String distancia = JOptionPane.showInputDialog("Distancia que recorre con tanque lleno:");
+                            String altitud = JOptionPane.showInputDialog("Altitud:");
+                            Transportes.add(new Helicoptero(helices, patas, gasolina, partida, llegada, tanque, distancia, altitud));
+                        } else if (Tipo == 2) {
+                            String pasajeros = JOptionPane.showInputDialog("Numero de Pasajeros:");
+                            String piloto = "";
+                            do {
+                                Menu3 = JOptionPane.showInputDialog("Funciona el piloto automatico?");
+                            } while (!Menu3.equalsIgnoreCase("si") || !Menu3.equalsIgnoreCase("no"));
+                            if (Menu3.equalsIgnoreCase("si")) {
+                                piloto = "SI";
+                            } else if (Menu3.equalsIgnoreCase("no")) {
+                                piloto = "NO";
                             }
-
+                            String partida = JOptionPane.showInputDialog("Pais de partida:");
+                            String llegada = JOptionPane.showInputDialog("Pais de llegada:");
+                            String tanque = "Lleno";
+                            String distancia = JOptionPane.showInputDialog("Distancia que recorre con tanque lleno:");
+                            String altitud = JOptionPane.showInputDialog("Altitud:");
+                            Transportes.add(new Avion(pasajeros, piloto, gasolina, partida, llegada, tanque, distancia, altitud));
                         }
 
-                        if (Menu2.equalsIgnoreCase("b")) {
+                    }
 
-                            do {
-                                Menu3 = JOptionPane.showInputDialog("Espacial"
-                                        + "a. Nave Espacial"
-                                        + "b. Cohete");
-                            } while (!Menu3.equalsIgnoreCase("a") || !Menu3.equalsIgnoreCase("b"));
+                    if (Menu2.equalsIgnoreCase("b")) {
+
+                        do {
+                            Menu3 = JOptionPane.showInputDialog("Espacial\n"
+                                    + "a. Nave Espacial\n"
+                                    + "b. Cohete\n");
                             if (Menu3.equalsIgnoreCase("a")) {
                                 Tipo = 1;
                             } else if (Menu3.equalsIgnoreCase("b")) {
                                 Tipo = 2;
                             }
-                            do {
-                                Menu3 = JOptionPane.showInputDialog("Tipo de Gasolina."
-                                        + "a. Quimico"
-                                        + "b. Solido"
-                                        + "c. Propelente Liquido");
-                            } while (!Menu3.equalsIgnoreCase("a") || !Menu3.equalsIgnoreCase("b") || !Menu3.equalsIgnoreCase("c"));
+                        } while (Tipo < 1);
+                        do {
+                            Menu3 = JOptionPane.showInputDialog("Tipo de Gasolina.\n"
+                                    + "a. Quimico\n"
+                                    + "b. Solido\n"
+                                    + "c. Propelente Liquido\n");
                             if (Menu3.equalsIgnoreCase("a")) {
                                 gasolina = "Quimico";
                             } else if (Menu3.equalsIgnoreCase("b")) {
@@ -342,31 +207,49 @@ public class Programacion2Laboratorio4 {
                             } else if (Menu3.equalsIgnoreCase("c")) {
                                 gasolina = "Propelente Liquido";
                             }
+                        } while (gasolina.equals(""));
 
-                            if (Tipo == 1) {
-                                String propulsores = JOptionPane.showInputDialog("Numero de propulsores:");
-                                String partida = JOptionPane.showInputDialog("Planeta de partida:");
-                                String llegada = JOptionPane.showInputDialog("Planeta de llegada:");
-                                Transportes.add(new Nave(propulsores, gasolina, partida, llegada));
+                        if (Tipo == 1) {
+                            String propulsores = JOptionPane.showInputDialog("Numero de propulsores:");
+                            String partida = JOptionPane.showInputDialog("Planeta de partida:");
+                            String llegada = JOptionPane.showInputDialog("Planeta de llegada:");
+                            Transportes.add(new Nave(propulsores, gasolina, partida, llegada));
 
-                            } else if (Tipo == 2) {
-                                String separaciones = JOptionPane.showInputDialog("Numero de separaciones:");
-                                String partida = JOptionPane.showInputDialog("Planeta de partida:");
-                                String llegada = JOptionPane.showInputDialog("Planeta de llegada:");
-                                Transportes.add(new Cohete(separaciones, gasolina, partida, llegada));
-                            }
+                        } else if (Tipo == 2) {
+                            String separaciones = JOptionPane.showInputDialog("Numero de separaciones:");
+                            String partida = JOptionPane.showInputDialog("Planeta de partida:");
+                            String llegada = JOptionPane.showInputDialog("Planeta de llegada:");
+                            Transportes.add(new Cohete(separaciones, gasolina, partida, llegada));
                         }
-                    } while (!Menu2.equalsIgnoreCase("a") || !Menu2.equalsIgnoreCase("b"));
+                    }
                     break;
                 case "b":
+                    String cadena1 = "";
+                    int c1 = 1;
+                    for (int i = 0; i < Transportes.size(); i++) {
+
+                        cadena1 += c1 + ")" + Transportes.get(i) + "\n";
+                        c1++;
+                    }
+                    JOptionPane.showMessageDialog(null, cadena1);
+                    break;
+                    
+                case "c":
+                    String cadena = "";
+                    int c = 1;
+                    for (int i = 0; i < Transportes.size(); i++) {
+
+                        cadena += c + ")" + Transportes.get(i) + "\n";
+                        c++;
+                    }
+                    int p = Integer.parseInt(JOptionPane.showInputDialog(cadena + "Escoja Transporte para modificar: "));
+                    
                     break;
 
             }
 
         } while (!menu.equalsIgnoreCase("e"));
     }
->>>>>>> ea0e74fd3f508daca09f78403c8288f7b187ffff
-
 
     private static void ingenieros() {
         String opcion = "";
