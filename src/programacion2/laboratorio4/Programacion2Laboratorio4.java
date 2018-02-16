@@ -10,17 +10,14 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 public class Programacion2Laboratorio4 {
-<<<<<<< HEAD
+
 
     static ArrayList<Ingenieros> ingenieros = new ArrayList();
     static ArrayList<MediosdeTransporte> Transportes = new ArrayList();
 
-=======
-static ArrayList<Ingenieros> ingenieros=new ArrayList();
 static Aereo aereo=new Aereo();
 static ArrayList<Primates> primate=new ArrayList();
 static Mono_Baboon mono=new Mono_Baboon();
->>>>>>> f5ef70e4ec35ec9296929cfd857f118b1f057b3c
     /**
      * @param args the command line arguments
      */
@@ -110,17 +107,16 @@ static Mono_Baboon mono=new Mono_Baboon();
     }
 
     private static void transportes() {
-<<<<<<< HEAD
-        String Menu;
+String menu;
         do {
-            Menu = JOptionPane.showInputDialog("+-+TRANSPORTES+-+"
+             menu = JOptionPane.showInputDialog("+-+TRANSPORTES+-+"
                     + "a. Crear"
                     + "b. Listar"
                     + "c. Modificar"
                     + "d. Eliminar"
                     + "e. Salir");
 
-            switch (Menu) {
+            switch (menu) {
                 case "a":
                     String Menu2;
                     String Menu3;
@@ -175,10 +171,7 @@ static Mono_Baboon mono=new Mono_Baboon();
                     } while (!Menu2.equalsIgnoreCase("a") || !Menu2.equalsIgnoreCase("b"));
 
             }
-        } while (!Menu.equalsIgnoreCase("e"));
-=======
-        
->>>>>>> f5ef70e4ec35ec9296929cfd857f118b1f057b3c
+        } while (!menu.equalsIgnoreCase("e"));
     }
 
     private static void ingenieros() {
