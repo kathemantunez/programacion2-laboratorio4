@@ -10,34 +10,36 @@ package programacion2.laboratorio4;
  * @author Asus
  */
 public class Helicoptero  extends Aereo{
-    private int Helices;
-    private int Patas;
+    private String Helices;
+    private String Patas;
 
     public Helicoptero() {
     }
 
-    public Helicoptero(int Helices, int Patas, String Gasolina, String PaisdePartida, String PaisdeLlegada, String Tanque, double Distancia, double Altitud) {
+    public Helicoptero(String Helices, String Patas, String Gasolina, String PaisdePartida, String PaisdeLlegada, String Tanque, String Distancia, String Altitud) {
         super(Gasolina, PaisdePartida, PaisdeLlegada, Tanque, Distancia, Altitud);
         this.Helices = Helices;
         this.Patas = Patas;
     }
 
-    public int getHelices() {
+    public String getHelices() {
         return Helices;
     }
 
-    public void setHelices(int Helices) {
+    public void setHelices(String Helices) {
         this.Helices = Helices;
     }
 
-    public int getPatas() {
+    public String getPatas() {
         return Patas;
     }
 
-    public void setPatas(int Patas) {
+    public void setPatas(String Patas) {
         this.Patas = Patas;
     }
 
+    
+    
     @Override
     public String toString() {
         return "Helicoptero{" + "Helices=" + Helices + ", Patas=" + Patas + '}';

@@ -13,14 +13,14 @@ import java.util.ArrayList;
  */
 public class MediosdeTransporte {
     private String Tanque;
-    private double Distancia; 
-    private double Altitud;
+    private String Distancia; 
+    private String Altitud;
     private ArrayList<Primates> Primates = new ArrayList();
 
     public MediosdeTransporte() {
     }
 
-    public MediosdeTransporte(String Tanque, double Distancia, double Altitud) {
+    public MediosdeTransporte(String Tanque, String Distancia, String Altitud) {
         this.Tanque = Tanque;
         this.Distancia = Distancia;
         this.Altitud = Altitud;
@@ -34,19 +34,19 @@ public class MediosdeTransporte {
         this.Tanque = Tanque;
     }
 
-    public double getDistancia() {
+    public String getDistancia() {
         return Distancia;
     }
 
-    public void setDistancia(double Distancia) {
+    public void setDistancia(String Distancia) {
         this.Distancia = Distancia;
     }
 
-    public double getAltitud() {
+    public String getAltitud() {
         return Altitud;
     }
 
-    public void setAltitud(double Altitud) {
+    public void setAltitud(String Altitud) {
         this.Altitud = Altitud;
     }
 

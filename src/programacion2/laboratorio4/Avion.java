@@ -10,23 +10,23 @@ package programacion2.laboratorio4;
  * @author Asus
  */
 public class Avion  extends Aereo{
-    private int Pasajeros;
+    private String Pasajeros;
     private boolean PilotoAutomatico;
 
     public Avion() {
     }
 
-    public Avion(int Pasajeros, boolean PilotoAutomatico, String Gasolina, String PaisdePartida, String PaisdeLlegada, String Tanque, double Distancia, double Altitud) {
+    public Avion(String Pasajeros, boolean PilotoAutomatico, String Gasolina, String PaisdePartida, String PaisdeLlegada, String Tanque, String Distancia, String Altitud) {
         super(Gasolina, PaisdePartida, PaisdeLlegada, Tanque, Distancia, Altitud);
         this.Pasajeros = Pasajeros;
         this.PilotoAutomatico = PilotoAutomatico;
     }
 
-    public int getPasajeros() {
+    public String getPasajeros() {
         return Pasajeros;
     }
 
-    public void setPasajeros(int Pasajeros) {
+    public void setPasajeros(String Pasajeros) {
         this.Pasajeros = Pasajeros;
     }
 

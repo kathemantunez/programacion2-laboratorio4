@@ -17,7 +17,7 @@ public class Aereo extends MediosdeTransporte{
     public Aereo() {
     }
 
-    public Aereo(String Gasolina, String PaisdePartida, String PaisdeLlegada, String Tanque, double Distancia, double Altitud) {
+    public Aereo(String Gasolina, String PaisdePartida, String PaisdeLlegada, String Tanque, String Distancia, String Altitud) {
         super(Tanque, Distancia, Altitud);
         this.Gasolina = Gasolina;
         this.PaisdePartida = PaisdePartida;

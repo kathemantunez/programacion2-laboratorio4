@@ -12,21 +12,21 @@ import programacion2.laboratorio4.Espacial;
  * @author Asus
  */
 public class Cohete extends Espacial{
-    private int Separaciones;
+    private String Separaciones;
 
     public Cohete() {
     }
 
-    public Cohete(int Separaciones, String Combustible, String PlanetadePartida, String PanetadeLlegada) {
+    public Cohete(String Separaciones, String Combustible, String PlanetadePartida, String PanetadeLlegada) {
         super(Combustible, PlanetadePartida, PanetadeLlegada);
         this.Separaciones = Separaciones;
     }
 
-    public int getSeparaciones() {
+    public String getSeparaciones() {
         return Separaciones;
     }
 
-    public void setSeparaciones(int Separaciones) {
+    public void setSeparaciones(String Separaciones) {
         this.Separaciones = Separaciones;
     }
 

@@ -9,7 +9,7 @@ package programacion2.laboratorio4;
  *
  * @author Asus
  */
-public class Espacial {
+public class Espacial extends MediosdeTransporte{
     private String Combustible;
     private String PlanetadePartida;
     private String PanetadeLlegada;
