@@ -10,17 +10,13 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 public class Programacion2Laboratorio4 {
-<<<<<<< HEAD
 
     static ArrayList<Ingenieros> ingenieros = new ArrayList();
     static ArrayList<MediosdeTransporte> Transportes = new ArrayList();
+    static Aereo aereo = new Aereo();
+    static ArrayList<Primates> primate = new ArrayList();
+    static Mono_Baboon mono = new Mono_Baboon();
 
-=======
-static ArrayList<Ingenieros> ingenieros=new ArrayList();
-static Aereo aereo=new Aereo();
-static ArrayList<Primates> primate=new ArrayList();
-static Mono_Baboon mono=new Mono_Baboon();
->>>>>>> f5ef70e4ec35ec9296929cfd857f118b1f057b3c
     /**
      * @param args the command line arguments
      */
@@ -109,8 +105,7 @@ static Mono_Baboon mono=new Mono_Baboon();
 
     }
 
-    private static void transportes() {
-<<<<<<< HEAD
+    private static void transportes() {        
         String Menu;
         do {
             Menu = JOptionPane.showInputDialog("+-+TRANSPORTES+-+"
@@ -129,7 +124,7 @@ static Mono_Baboon mono=new Mono_Baboon();
                                 + "a. Aereo Nave Normal"
                                 + "b. Espacial");
                         if (Menu2.equalsIgnoreCase("a")) {
-                            String gasolina;
+                            String gasolina = "";
                             int Tipo = 0;
                             do {
                                 Menu3 = JOptionPane.showInputDialog("Aereo Nave"
@@ -159,14 +154,21 @@ static Mono_Baboon mono=new Mono_Baboon();
                             if (Tipo == 1) {
                                 String helices = JOptionPane.showInputDialog("Helices:");
                                 String patas = JOptionPane.showInputDialog("Patas:");
-                                String partida = JOptionPane.showInputDialog("Pais de artida:");
-                                String llegada = JOptionPane.showInputDialog("Pais de LLegada:");
-                                String tanque = JOptionPane.showInputDialog("DIstancia que recorre con tanque lleno:");
+                                String partida = JOptionPane.showInputDialog("Pais de partida:");
+                                String llegada = JOptionPane.showInputDialog("Pais de llegada:");
+                                String tanque = "Lleno";
+                                String distancia = JOptionPane.showInputDialog("Distancia que recorre con tanque lleno:");
                                 String altitud = JOptionPane.showInputDialog("Altitud:");
-                                Transportes.add(new Helicoptero());
+                                Transportes.add(new Helicoptero(helices, patas, gasolina, partida, llegada, tanque, distancia, altitud));
                             } else if (Tipo == 2) {
-
-                                Transportes.add(new Avion());
+                                String pasajeros = JOptionPane.showInputDialog("Numero de Pasajeros:");
+                                String piloto = JOptionPane.showInputDialog("Funciona el piloto automatico?:");
+                                String partida = JOptionPane.showInputDialog("Pais de partida:");
+                                String llegada = JOptionPane.showInputDialog("Pais de llegada:");
+                                String tanque = "Lleno";
+                                String distancia = JOptionPane.showInputDialog("Distancia que recorre con tanque lleno:");
+                                String altitud = JOptionPane.showInputDialog("Altitud:");
+                                Transportes.add(new Avion(pasajeros, piloto, gasolina, partida, llegada, tanque, distancia, altitud));
                             }
 
                         } else {
@@ -176,179 +178,172 @@ static Mono_Baboon mono=new Mono_Baboon();
 
             }
         } while (!Menu.equalsIgnoreCase("e"));
-=======
-        
->>>>>>> f5ef70e4ec35ec9296929cfd857f118b1f057b3c
     }
 
     private static void ingenieros() {
-       String opcion="";
-            opcion=JOptionPane.showInputDialog("a. listar ingenieros\n"
-                    + "b.modificar ingenieros");
-            
-           switch(opcion){
-               case"a":
-                   String cadena1="";
-                int c1=1;
-            for (int i = 0; i < ingenieros.size(); i++) {
-                 
-                cadena1+=c1+")"+ingenieros.get(i)+"\n";
-                c1++;
-            }
-            JOptionPane.showMessageDialog(null, cadena1);
-            
-                   break;
-                   
-               case "b":
-                  String cadena="";
-                int c=1;
-            for (int i = 0; i < ingenieros.size(); i++) {
-                 
-                cadena+=c+")"+ingenieros.get(i)+"\n";
-                c++;
-            }
-            int p=Integer.parseInt(JOptionPane.showInputDialog(cadena,"Escoja ingeniero para modificar"));
-            
-             String correo=JOptionPane.showInputDialog("nuevo correo electronico:");
-             ingenieros.get(p-1).setCorreo(correo);
-        String nombreusuario=JOptionPane.showInputDialog(" nuevo nombre de usuario");
-        ingenieros.get(p-1).setNombreusuario(nombreusuario);
-        
-        String contraseña=JOptionPane.showInputDialog("nueva contraseña");
-        ingenieros.get(p-1).setContraseña(contraseña);
-        int cafe=Integer.parseInt(JOptionPane.showInputDialog("nueva cantidad de cafe"));
-        ingenieros.get(p-1).setCafe(cafe);
-        String fecha=JOptionPane.showInputDialog("nueva fecha de nacimiento");
-        ingenieros.get(p-1).setFecha(fecha);
-        String nombre=JOptionPane.showInputDialog("nuevo nombre");
-        ingenieros.get(p-1).setNombre(nombre);
-        int altura=Integer.parseInt(JOptionPane.showInputDialog("nueva altura"));
-        ingenieros.get(p-1).setAltura(altura);
-        int peso=Integer.parseInt(JOptionPane.showInputDialog("nuevo peso"));
-        ingenieros.get(p-1).setPeso(peso);
-                   break;
-    }
+        String opcion = "";
+        opcion = JOptionPane.showInputDialog("a. listar ingenieros\n"
+                + "b.modificar ingenieros");
+
+        switch (opcion) {
+            case "a":
+                String cadena1 = "";
+                int c1 = 1;
+                for (int i = 0; i < ingenieros.size(); i++) {
+
+                    cadena1 += c1 + ")" + ingenieros.get(i) + "\n";
+                    c1++;
+                }
+                JOptionPane.showMessageDialog(null, cadena1);
+
+                break;
+
+            case "b":
+                String cadena = "";
+                int c = 1;
+                for (int i = 0; i < ingenieros.size(); i++) {
+
+                    cadena += c + ")" + ingenieros.get(i) + "\n";
+                    c++;
+                }
+                int p = Integer.parseInt(JOptionPane.showInputDialog(cadena, "Escoja ingeniero para modificar"));
+
+                String correo = JOptionPane.showInputDialog("nuevo correo electronico:");
+                ingenieros.get(p - 1).setCorreo(correo);
+                String nombreusuario = JOptionPane.showInputDialog(" nuevo nombre de usuario");
+                ingenieros.get(p - 1).setNombreusuario(nombreusuario);
+
+                String contraseña = JOptionPane.showInputDialog("nueva contraseña");
+                ingenieros.get(p - 1).setContraseña(contraseña);
+                int cafe = Integer.parseInt(JOptionPane.showInputDialog("nueva cantidad de cafe"));
+                ingenieros.get(p - 1).setCafe(cafe);
+                String fecha = JOptionPane.showInputDialog("nueva fecha de nacimiento");
+                ingenieros.get(p - 1).setFecha(fecha);
+                String nombre = JOptionPane.showInputDialog("nuevo nombre");
+                ingenieros.get(p - 1).setNombre(nombre);
+                int altura = Integer.parseInt(JOptionPane.showInputDialog("nueva altura"));
+                ingenieros.get(p - 1).setAltura(altura);
+                int peso = Integer.parseInt(JOptionPane.showInputDialog("nuevo peso"));
+                ingenieros.get(p - 1).setPeso(peso);
+                break;
+        }
     }
 
-    private static void primates()  {
-        String opcion="";
-            opcion=JOptionPane.showInputDialog("a. crear primates\n"
-                    + "b.listar primates\n"
-                    + "c. modificar primates\n"
-                    + "d.eliminar primates");
-            switch(opcion){
-                case "a":
+    private static void primates() {
+        String opcion = "";
+        opcion = JOptionPane.showInputDialog("a. crear primates\n"
+                + "b.listar primates\n"
+                + "c. modificar primates\n"
+                + "d.eliminar primates");
+        switch (opcion) {
+            case "a":
 //                    String area, int cantidadcomida, String planeta, String lugarnacimiento
-                    String opcion2="";
-                 opcion2=JOptionPane.showInputDialog("a.Mono Baboon\n"
-                         + "b.gorila de montaña");
-                 if(opcion2.equals("a")){
+                String opcion2 = "";
+                opcion2 = JOptionPane.showInputDialog("a.Mono Baboon\n"
+                        + "b.gorila de montaña");
+                if (opcion2.equals("a")) {
 //                     Color colorpelo, String area, int cantidadcomida, 
 //                             String planeta, String lugarnacimiento, String nombre, String gruposangre, String sexo, int altura, int peso
-                       String colorpelo=JOptionPane.showInputDialog("color de pelo");
-                       
-                        String area=JOptionPane.showInputDialog("area asignada(aérea espacial/aérea normal)");
-                     int contidadcomida=Integer.parseInt(JOptionPane.showInputDialog("cantidad de comida por km"));
-                     String planeta=JOptionPane.showInputDialog("planeta");
-                     String lugarnacimieto=JOptionPane.showInputDialog("lugar de nacimiento");
-                     String nombre=JOptionPane.showInputDialog("nombre");
-                     String gruposangre=JOptionPane.showInputDialog("grupo de sangre");
-                      int altura=Integer.parseInt(JOptionPane.showInputDialog("altura"));
-                      primate.add(new Mono_Baboon(colorpelo, area, contidadcomida, planeta, lugarnacimieto, nombre, gruposangre, area, altura, altura));
-                      
-                 }else{
+                    String colorpelo = JOptionPane.showInputDialog("color de pelo");
+
+                    String area = JOptionPane.showInputDialog("area asignada(aérea espacial/aérea normal)");
+                    int contidadcomida = Integer.parseInt(JOptionPane.showInputDialog("cantidad de comida por km"));
+                    String planeta = JOptionPane.showInputDialog("planeta");
+                    String lugarnacimieto = JOptionPane.showInputDialog("lugar de nacimiento");
+                    String nombre = JOptionPane.showInputDialog("nombre");
+                    String gruposangre = JOptionPane.showInputDialog("grupo de sangre");
+                    int altura = Integer.parseInt(JOptionPane.showInputDialog("altura"));
+                    primate.add(new Mono_Baboon(colorpelo, area, contidadcomida, planeta, lugarnacimieto, nombre, gruposangre, area, altura, altura));
+
+                } else {
 //                     int IQ, String area, int cantidadcomida,
 //                             String planeta, String lugarnacimiento, String nombre, String gruposangre, String sexo, int altura, int peso
-                        int IQ=Integer.parseInt(JOptionPane.showInputDialog("IQ (130-139)"));
-                         String area=JOptionPane.showInputDialog("area asignada(aérea espacial/aérea normal)");
-                     int contidadcomida=Integer.parseInt(JOptionPane.showInputDialog("cantidad de comida por km"));
-                     String planeta=JOptionPane.showInputDialog("planeta");
-                     String lugarnacimieto=JOptionPane.showInputDialog("lugar de nacimiento");
-                     String nombre=JOptionPane.showInputDialog("nombre");
-                     String gruposangre=JOptionPane.showInputDialog("grupo de sangre");
-                      int altura=Integer.parseInt(JOptionPane.showInputDialog("altura"));
-                      primate.add(new Gorila_montaña(IQ, area, contidadcomida, planeta, lugarnacimieto, nombre, gruposangre, area, altura, altura));
-                 }
-                
-                     
-                    break;
-                case "b":
-                    
-                      String cadena1="";
-                             int c1=1;
-                         for (int i = 0; i < primate.size(); i++) {
+                    int IQ = Integer.parseInt(JOptionPane.showInputDialog("IQ (130-139)"));
+                    String area = JOptionPane.showInputDialog("area asignada(aérea espacial/aérea normal)");
+                    int contidadcomida = Integer.parseInt(JOptionPane.showInputDialog("cantidad de comida por km"));
+                    String planeta = JOptionPane.showInputDialog("planeta");
+                    String lugarnacimieto = JOptionPane.showInputDialog("lugar de nacimiento");
+                    String nombre = JOptionPane.showInputDialog("nombre");
+                    String gruposangre = JOptionPane.showInputDialog("grupo de sangre");
+                    int altura = Integer.parseInt(JOptionPane.showInputDialog("altura"));
+                    primate.add(new Gorila_montaña(IQ, area, contidadcomida, planeta, lugarnacimieto, nombre, gruposangre, area, altura, altura));
+                }
 
-                             cadena1+=c1+")"+primate.get(i)+"\n";
-                             c1++;
-                         }
-                         JOptionPane.showMessageDialog(null, cadena1);
-                    break;
-                case "c":
-                      String cadena="";
-                        int c=1;
-                    for (int i = 0; i < primate.size(); i++) {
+                break;
+            case "b":
 
-                        cadena+=c+")"+primate.get(i)+"\n";
-                        c++;
-                    }
-                    int p=Integer.parseInt(JOptionPane.showInputDialog(cadena,"Escoja primate para modificar"));
-                    
-                    if(primate.get(p-1)instanceof Mono_Baboon){
-                        String colorpelo=JOptionPane.showInputDialog("color de pelo");
-                        ((Mono_Baboon)primate.get(p-1)).setColorpelo(colorpelo);
+                String cadena1 = "";
+                int c1 = 1;
+                for (int i = 0; i < primate.size(); i++) {
+
+                    cadena1 += c1 + ")" + primate.get(i) + "\n";
+                    c1++;
+                }
+                JOptionPane.showMessageDialog(null, cadena1);
+                break;
+            case "c":
+                String cadena = "";
+                int c = 1;
+                for (int i = 0; i < primate.size(); i++) {
+
+                    cadena += c + ")" + primate.get(i) + "\n";
+                    c++;
+                }
+                int p = Integer.parseInt(JOptionPane.showInputDialog(cadena, "Escoja primate para modificar"));
+
+                if (primate.get(p - 1) instanceof Mono_Baboon) {
+                    String colorpelo = JOptionPane.showInputDialog("color de pelo");
+                    ((Mono_Baboon) primate.get(p - 1)).setColorpelo(colorpelo);
 //                   
-                        String area=JOptionPane.showInputDialog("area asignada(aérea espacial/aérea normal)");
-                         ((Mono_Baboon)primate.get(p-1)).setArea(area);
-                     int cantidadcomida=Integer.parseInt(JOptionPane.showInputDialog("cantidad de comida por km"));
-                      ((Mono_Baboon)primate.get(p-1)).setCantidadcomida(cantidadcomida);
-                     String planeta=JOptionPane.showInputDialog("planeta");
-                      ((Mono_Baboon)primate.get(p-1)).setPlaneta(planeta);
-                     String lugarnacimieto=JOptionPane.showInputDialog("lugar de nacimiento");
-                      ((Mono_Baboon)primate.get(p-1)).setLugarnacimiento(lugarnacimieto);
-                     String nombre=JOptionPane.showInputDialog("nombre");
-                      ((Mono_Baboon)primate.get(p-1)).setNombre(nombre);
-                     String gruposangre=JOptionPane.showInputDialog("grupo de sangre");
-                      ((Mono_Baboon)primate.get(p-1)).setGruposangre(gruposangre);
-                      int altura=Integer.parseInt(JOptionPane.showInputDialog("altura"));
-                       ((Mono_Baboon)primate.get(p-1)).setAltura(altura);
-                    }else{
-                        if(primate.get(p-1)instanceof Gorila_montaña){
-                             int IQ2=Integer.parseInt(JOptionPane.showInputDialog("IQ (130-139)"));
-                             
-                             
-                         String area=JOptionPane.showInputDialog("area asignada(aérea espacial/aérea normal)");
-                          ((Mono_Baboon)primate.get(p-1)).setArea(area);
-                     int contidadcomida=Integer.parseInt(JOptionPane.showInputDialog("cantidad de comida por km"));
-                      ((Mono_Baboon)primate.get(p-1)).setCantidadcomida(contidadcomida);
-                     String planeta=JOptionPane.showInputDialog("planeta");
-                      ((Mono_Baboon)primate.get(p-1)).setPlaneta(planeta);
-                     String lugarnacimieto=JOptionPane.showInputDialog("lugar de nacimiento");
-                      ((Mono_Baboon)primate.get(p-1)).setLugarnacimiento(lugarnacimieto);
-                     String nombre=JOptionPane.showInputDialog("nombre");
-                      ((Mono_Baboon)primate.get(p-1)).setNombre(nombre);
-                     String gruposangre=JOptionPane.showInputDialog("grupo de sangre");
-                      ((Mono_Baboon)primate.get(p-1)).setGruposangre(gruposangre);
-                      int altura=Integer.parseInt(JOptionPane.showInputDialog("altura"));
-                       ((Mono_Baboon)primate.get(p-1)).setAltura(altura);
-                        }
-                    }
-                    break;
-                case "d":
-                    String cadena2="";
-                             int c2=1;
-                         for (int i = 0; i < primate.size(); i++) {
+                    String area = JOptionPane.showInputDialog("area asignada(aérea espacial/aérea normal)");
+                    ((Mono_Baboon) primate.get(p - 1)).setArea(area);
+                    int cantidadcomida = Integer.parseInt(JOptionPane.showInputDialog("cantidad de comida por km"));
+                    ((Mono_Baboon) primate.get(p - 1)).setCantidadcomida(cantidadcomida);
+                    String planeta = JOptionPane.showInputDialog("planeta");
+                    ((Mono_Baboon) primate.get(p - 1)).setPlaneta(planeta);
+                    String lugarnacimieto = JOptionPane.showInputDialog("lugar de nacimiento");
+                    ((Mono_Baboon) primate.get(p - 1)).setLugarnacimiento(lugarnacimieto);
+                    String nombre = JOptionPane.showInputDialog("nombre");
+                    ((Mono_Baboon) primate.get(p - 1)).setNombre(nombre);
+                    String gruposangre = JOptionPane.showInputDialog("grupo de sangre");
+                    ((Mono_Baboon) primate.get(p - 1)).setGruposangre(gruposangre);
+                    int altura = Integer.parseInt(JOptionPane.showInputDialog("altura"));
+                    ((Mono_Baboon) primate.get(p - 1)).setAltura(altura);
+                } else if (primate.get(p - 1) instanceof Gorila_montaña) {
+                    int IQ2 = Integer.parseInt(JOptionPane.showInputDialog("IQ (130-139)"));
 
-                             cadena2+=c2+")"+primate.get(i)+"\n";
-                             c2++;
-                         }
-                         int p2=Integer.parseInt(JOptionPane.showInputDialog(cadena2,"Escoja primate para eliminar"));
-                         primate.remove(p2-1);
-                    break;
-                    
-            }
+                    String area = JOptionPane.showInputDialog("area asignada(aérea espacial/aérea normal)");
+                    ((Mono_Baboon) primate.get(p - 1)).setArea(area);
+                    int contidadcomida = Integer.parseInt(JOptionPane.showInputDialog("cantidad de comida por km"));
+                    ((Mono_Baboon) primate.get(p - 1)).setCantidadcomida(contidadcomida);
+                    String planeta = JOptionPane.showInputDialog("planeta");
+                    ((Mono_Baboon) primate.get(p - 1)).setPlaneta(planeta);
+                    String lugarnacimieto = JOptionPane.showInputDialog("lugar de nacimiento");
+                    ((Mono_Baboon) primate.get(p - 1)).setLugarnacimiento(lugarnacimieto);
+                    String nombre = JOptionPane.showInputDialog("nombre");
+                    ((Mono_Baboon) primate.get(p - 1)).setNombre(nombre);
+                    String gruposangre = JOptionPane.showInputDialog("grupo de sangre");
+                    ((Mono_Baboon) primate.get(p - 1)).setGruposangre(gruposangre);
+                    int altura = Integer.parseInt(JOptionPane.showInputDialog("altura"));
+                    ((Mono_Baboon) primate.get(p - 1)).setAltura(altura);
+                }
+                break;
+            case "d":
+                String cadena2 = "";
+                int c2 = 1;
+                for (int i = 0; i < primate.size(); i++) {
+
+                    cadena2 += c2 + ")" + primate.get(i) + "\n";
+                    c2++;
+                }
+                int p2 = Integer.parseInt(JOptionPane.showInputDialog(cadena2, "Escoja primate para eliminar"));
+                primate.remove(p2 - 1);
+                break;
+
+        }
     }
 
     private static void viajes() {
-         
+
     }
 }
