@@ -106,25 +106,26 @@ public class Programacion2Laboratorio4 {
     }
 
     private static void transportes() {
-        String Menu;
+        String menu;
+        String Menu2 = "";
+        String Menu3;
+        String gasolina = "";
+        int Tipo = 0;
         do {
-            Menu = JOptionPane.showInputDialog("+-+TRANSPORTES+-+"
+            menu = JOptionPane.showInputDialog("+-+TRANSPORTES+-+"
                     + "a. Crear"
                     + "b. Listar"
                     + "c. Modificar"
                     + "d. Eliminar"
                     + "e. Salir");
-            switch (Menu) {
+            switch (menu) {
                 case "a":
-                    String Menu2;
-                    String Menu3;
                     do {
                         Menu2 = JOptionPane.showInputDialog("DESEA CREAR"
                                 + "a. Aereo Nave Normal"
                                 + "b. Espacial");
                         if (Menu2.equalsIgnoreCase("a")) {
-                            String gasolina = "";
-                            int Tipo = 0;
+
                             do {
                                 Menu3 = JOptionPane.showInputDialog("Aereo Nave"
                                         + "a. Helicoptero"
@@ -179,9 +180,9 @@ public class Programacion2Laboratorio4 {
                             }
 
                         }
+
                         if (Menu2.equalsIgnoreCase("b")) {
-                            String gasolina = "";
-                            int Tipo = 0;
+
                             do {
                                 Menu3 = JOptionPane.showInputDialog("Espacial"
                                         + "a. Nave Espacial"
@@ -218,16 +219,15 @@ public class Programacion2Laboratorio4 {
                                 String llegada = JOptionPane.showInputDialog("Planeta de llegada:");
                                 Transportes.add(new Cohete(separaciones, gasolina, partida, llegada));
                             }
-
                         }
                     } while (!Menu2.equalsIgnoreCase("a") || !Menu2.equalsIgnoreCase("b"));
-
                     break;
                 case "b":
-                    
                     break;
+
             }
-        } while (!Menu.equalsIgnoreCase("e"));
+
+        } while (!menu.equalsIgnoreCase("e"));
     }
 
     private static void ingenieros() {
@@ -339,7 +339,7 @@ public class Programacion2Laboratorio4 {
                     cadena += c + ")" + primate.get(i) + "\n";
                     c++;
                 }
-                int p = Integer.parseInt(JOptionPane.showInputDialog(cadena, "Escoja primate para modificar"));
+                int p = Integer.parseInt(JOptionPane.showInputDialog(cadena + "Escoja primate para modificar"));
 
                 if (primate.get(p - 1) instanceof Mono_Baboon) {
                     String colorpelo = JOptionPane.showInputDialog("color de pelo");
@@ -386,7 +386,7 @@ public class Programacion2Laboratorio4 {
                     cadena2 += c2 + ")" + primate.get(i) + "\n";
                     c2++;
                 }
-                int p2 = Integer.parseInt(JOptionPane.showInputDialog(cadena2, "Escoja primate para eliminar"));
+                int p2 = Integer.parseInt(JOptionPane.showInputDialog(cadena2 + "Escoja primate para eliminar"));
                 primate.remove(p2 - 1);
                 break;
 
@@ -394,6 +394,14 @@ public class Programacion2Laboratorio4 {
     }
 
     private static void viajes() {
+        String cadena = "";
+        int c2 = 1;
+        for (int i = 0; i < Transportes.size(); i++) {
+
+            cadena += c2 + ")" + Transportes.get(i) + "\n";
+            c2++;
+        }
+        int opcion = Integer.parseInt(JOptionPane.showInputDialog(cadena + "Escoja medio de transporte:"));
 
     }
 }

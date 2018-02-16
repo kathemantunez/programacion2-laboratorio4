@@ -86,7 +86,12 @@ public class Ingenieros extends SeresVivos{
     public String toString() {
         return "Ingenieros{" + "correo=" + correo + ", nombreusuario=" + nombreusuario + ", idiomas=" + idiomas + ", contrase\u00f1a=" + contraseña + ", cafe=" + cafe + ", fecha=" + fecha + '}';
     }
-    
+    public void cafe(){
+        
+    }
+    public void comida(){
+        
+    }
 }
     
     
