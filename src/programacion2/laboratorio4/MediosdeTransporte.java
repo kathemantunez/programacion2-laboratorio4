@@ -13,6 +13,7 @@ import java.util.ArrayList;
  */
 public class MediosdeTransporte {
     private String Tanque;
+<<<<<<< HEAD
     private String Distancia; 
     private String Altitud;
     private ArrayList<Primates> Primates = new ArrayList();
@@ -63,6 +64,11 @@ public class MediosdeTransporte {
         return "MediosdeTransporte{" + "Tanque=" + Tanque + ", Distancia=" + Distancia + ", Altitud=" + Altitud + ", Primates=" + Primates + '}';
     }
     
+=======
+    private double Distancia; 
+    private double Altitud;
+    private ArrayList<Primates> primates= new ArrayList();
+>>>>>>> f5ef70e4ec35ec9296929cfd857f118b1f057b3c
     
 }
 
