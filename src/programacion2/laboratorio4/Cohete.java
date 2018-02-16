@@ -13,4 +13,27 @@ import programacion2.laboratorio4.Espacial;
  */
 public class Cohete extends Espacial{
     private int Separaciones;
+
+    public Cohete() {
+    }
+
+    public Cohete(int Separaciones, String Combustible, String PlanetadePartida, String PanetadeLlegada) {
+        super(Combustible, PlanetadePartida, PanetadeLlegada);
+        this.Separaciones = Separaciones;
+    }
+
+    public int getSeparaciones() {
+        return Separaciones;
+    }
+
+    public void setSeparaciones(int Separaciones) {
+        this.Separaciones = Separaciones;
+    }
+
+    @Override
+    public String toString() {
+        return "Cohete{" + "Separaciones=" + Separaciones + '}';
+    }
+    
+    
 }

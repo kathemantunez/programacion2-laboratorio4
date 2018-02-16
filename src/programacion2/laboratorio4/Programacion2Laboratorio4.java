@@ -5,21 +5,31 @@
  */
 package programacion2.laboratorio4;
 
-/**
- *
- * @author KATHERINE
- */
-public class Programacion2Laboratorio4 {
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
-    /**
-     * @param args the command line arguments
-     */
+
+public class Programacion2Laboratorio4 {
+    ArrayList<MediosdeTransporte> Transporte = new ArrayList();
+    
     public static void main(String[] args) {
-        // TODO code application logic here
-        
-        String opcion"";
-        
-        
+        String opcion = "";
+    }
+    
+    public static void TransportesMenu(){
+        String Menu;
+        do{
+            Menu = JOptionPane.showInputDialog("+-+TRANSPORTES+-+"
+                    + "1. Crear"
+                    + "2. Listar"
+                    + "3. Modificar"
+                    + "4. Borrar"
+                    + "5. Salir");
+        }while(!Menu.equals("5"));
+    }
+    
+    public static void TransportesCrear(){
+        Transporte.add(new Transporte);
     }
     
 }

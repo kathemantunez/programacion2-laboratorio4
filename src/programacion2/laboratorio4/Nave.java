@@ -11,5 +11,27 @@ package programacion2.laboratorio4;
  */
 public class Nave extends Espacial{
     private int Propulsores;
+
+    public Nave() {
+    }
+
+    public Nave(int Propulsores, String Combustible, String PlanetadePartida, String PanetadeLlegada) {
+        super(Combustible, PlanetadePartida, PanetadeLlegada);
+        this.Propulsores = Propulsores;
+    }
+
+    public int getPropulsores() {
+        return Propulsores;
+    }
+
+    public void setPropulsores(int Propulsores) {
+        this.Propulsores = Propulsores;
+    }
+
+    @Override
+    public String toString() {
+        return "Nave{" + "Propulsores=" + Propulsores + '}';
+    }
+    
     
 }
