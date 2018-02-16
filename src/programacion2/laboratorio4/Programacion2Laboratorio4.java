@@ -17,6 +17,9 @@ public class Programacion2Laboratorio4 {
     public static void main(String[] args) {
         // TODO code application logic here
         
+        String opcion"";
+        
+        
     }
     
 }
