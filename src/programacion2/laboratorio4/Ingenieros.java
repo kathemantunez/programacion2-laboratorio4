@@ -64,6 +64,7 @@ public class Ingenieros extends SeresVivos{
 
     public void setContraseña(String contraseña) {
         this.contraseña = contraseña;
+        
     }
 
     public int getCafe() {
@@ -72,6 +73,9 @@ public class Ingenieros extends SeresVivos{
 
     public void setCafe(int cafe) {
         this.cafe = cafe;
+        if(cafe==0){
+            cafe=cafe;
+        }
     }
 
     public String getFecha() {

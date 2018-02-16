@@ -12,23 +12,31 @@ import java.util.ArrayList;
  * @author KATHERINE
  */
 public class viajes {
-    private ArrayList<MediosdeTransporte> mediostransporte=new ArrayList();
+    public MediosdeTransporte tra;
 
     public viajes() {
     }
 
-    public ArrayList<MediosdeTransporte> getMediostransporte() {
-        return mediostransporte;
+    public viajes(MediosdeTransporte tra) {
+        this.tra = tra;
     }
 
-    public void setMediostransporte(ArrayList<MediosdeTransporte> mediostransporte) {
-        this.mediostransporte = mediostransporte;
+    public MediosdeTransporte getTra() {
+        return tra;
+    }
+
+    public void setTra(MediosdeTransporte tra) {
+        this.tra = tra;
     }
 
     @Override
     public String toString() {
-        return "viajes{" + "mediostransporte=" + mediostransporte + '}';
+        return "viajes{" + "tra=" + tra + '}';
+    }
+    
+
+    
     }
     
     
-}
+
