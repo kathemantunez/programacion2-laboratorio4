@@ -15,6 +15,6 @@ public class MediosdeTransporte {
     private String Tanque;
     private double Distancia; 
     private double Altitud;
-    private ArrayList<Primates> = new ArrayList;
+    private ArrayList<Primates> primates= new ArrayList();
     
 }

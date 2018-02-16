@@ -12,21 +12,23 @@ import java.awt.Color;
  * @author KATHERINE
  */
 public class Mono_Baboon extends Primates{
-    private Color colorpelo;
+    private String colorpelo;
 
     public Mono_Baboon() {
     }
 
-    public Mono_Baboon(Color colorpelo, String area, int cantidadcomida, String planeta, String lugarnacimiento) {
-        super(area, cantidadcomida, planeta, lugarnacimiento);
+    public Mono_Baboon(String colorpelo, String area, int cantidadcomida, String planeta, String lugarnacimiento, String nombre, String gruposangre, String sexo, int altura, int peso) {
+        super(area, cantidadcomida, planeta, lugarnacimiento, nombre, gruposangre, sexo, altura, peso);
         this.colorpelo = colorpelo;
     }
 
-    public Color getColorpelo() {
+    
+
+    public String getColorpelo() {
         return colorpelo;
     }
 
-    public void setColorpelo(Color colorpelo) {
+    public void setColorpelo(String colorpelo) {
         this.colorpelo = colorpelo;
     }
 

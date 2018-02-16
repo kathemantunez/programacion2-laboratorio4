@@ -9,7 +9,7 @@ package programacion2.laboratorio4;
  *
  * @author KATHERINE
  */
-public class Primates {
+public class Primates extends SeresVivos{
     private String  area;
     private int cantidadcomida;
     private String planeta;
@@ -18,12 +18,15 @@ public class Primates {
     public Primates() {
     }
 
-    public Primates(String area, int cantidadcomida, String planeta, String lugarnacimiento) {
+    public Primates(String area, int cantidadcomida, String planeta, String lugarnacimiento, String nombre, String gruposangre, String sexo, int altura, int peso) {
+        super(nombre, gruposangre, sexo, altura, peso);
         this.area = area;
         this.cantidadcomida = cantidadcomida;
         this.planeta = planeta;
         this.lugarnacimiento = lugarnacimiento;
     }
+
+   
 
     public String getArea() {
         return area;
