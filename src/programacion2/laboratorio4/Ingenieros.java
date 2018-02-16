@@ -18,12 +18,12 @@ public class Ingenieros extends SeresVivos{
     private ArrayList idiomas=new ArrayList();
     private String contraseña;
     private int cafe;
-    private Date fecha;
+    private String  fecha;
 
     public Ingenieros() {
     }
 
-    public Ingenieros(String correo, String nombreusuario, String contraseña, int cafe, Date fecha, String nombre, String gruposangre, String sexo, int altura, int peso) {
+    public Ingenieros(String correo, String nombreusuario, String contraseña, int cafe, String fecha, String nombre, String gruposangre, String sexo, int altura, int peso) {
         super(nombre, gruposangre, sexo, altura, peso);
         this.correo = correo;
         this.nombreusuario = nombreusuario;
@@ -74,11 +74,11 @@ public class Ingenieros extends SeresVivos{
         this.cafe = cafe;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 
