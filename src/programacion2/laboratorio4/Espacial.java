@@ -51,12 +51,6 @@ public class Espacial extends MediosdeTransporte{
     public String toString() {
         return "Espacial{" + "Combustible=" + Combustible + ", PlanetadePartida=" + PlanetadePartida + ", PanetadeLlegada=" + PanetadeLlegada + '}';
     }
-
-    @Override
-    public void combustibles() {
-      
-        
-    }
     
     
 }
