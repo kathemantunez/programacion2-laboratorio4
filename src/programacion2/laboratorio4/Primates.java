@@ -9,7 +9,7 @@ package programacion2.laboratorio4;
  *
  * @author KATHERINE
  */
-public class Primates extends SeresVivos{
+public  class Primates extends SeresVivos{
     private String  area;
     private int cantidadcomida;
     private String planeta;
@@ -64,11 +64,21 @@ public class Primates extends SeresVivos{
     public String toString() {
         return "Primates{" + "area=" + area + ", cantidadcomida=" + cantidadcomida + ", planeta=" + planeta + ", lugarnacimiento=" + lugarnacimiento + '}';
     }
-    public void comida(){
-        
+
+    @Override
+    public boolean cafe() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    public void cafe(){
-        
+
+    @Override
+    public void comida() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
+   
 }
+
+        
+    
+    
+

@@ -73,6 +73,8 @@ public class Ingenieros extends SeresVivos{
 
     public void setCafe(int cafe) {
         this.cafe = cafe;
+        if(cafe==0){
+        }
        
     }
 
@@ -88,11 +90,22 @@ public class Ingenieros extends SeresVivos{
     public String toString() {
         return "Ingenieros{" + "correo=" + correo + ", nombreusuario=" + nombreusuario + ", idiomas=" + idiomas + ", contrase\u00f1a=" + contraseña + ", cafe=" + cafe + ", fecha=" + fecha + '}';
     }
-   public void cafe(){
+
+    @Override
+    public boolean cafe() {
+        boolean x=false;
        if(cafe==0){
-           this.cafe=cafe;
+           cafe=cafe;
+          x=true;
        }
-   }
+       return x;
+    }
+
+    @Override
+    public void comida() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+   
 }
     
     

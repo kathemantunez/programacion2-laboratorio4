@@ -19,9 +19,18 @@ public class Cola {
     
     private int size=0;
     private Nodo head=null;
+   private Nodo top=null;
+   
+    public Cola(int size,Nodo head,Nodo top) {
+        this.size=size;
+        this.head=head;
+        this.top=top;
+    }
 
     public Cola() {
+       
     }
+
 
     public int getSize() {
         return size;
@@ -43,10 +52,22 @@ public class Cola {
     public String toString() {
         return "Cola{" + "size=" + size + ", head=" + head + '}';
     }
-    
     public void Queue (MediosdeTransporte trans){
         viaje.add(new viajes(trans));
-        
+//         size++;
+//         if(size==1){
+//             head=trans;
+//         }
+//        node nuevo_empleado = new node(empleado, null);
+//        if (size == 1) {
+//            head = nuevo_empleado;
+//        } else if (size == 2) {
+//            head.setNext(new node(empleado, null));
+//            top = head.getNext();
+//        } else {
+//            top.setNext(new node(empleado, null));
+//            top = top.getNext();
+//        
     }
     public String  Peek(){
        String cadena="";
@@ -58,6 +79,7 @@ public class Cola {
 //        
         }
         return cadena;
+//        return head.getValue();
     }
     public int getsize(){
         int size=viaje.size();

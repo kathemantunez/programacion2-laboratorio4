@@ -17,7 +17,7 @@ public class Programacion2Laboratorio4 {
     static ArrayList<MediosdeTransporte> Transportes = new ArrayList();
     static Aereo aereo = new Aereo();
     static ArrayList<Primates> primate = new ArrayList();
-
+   static Ingenieros inge=new Ingenieros();
     static Cola cola=new Cola();
     static viajes viaje=new viajes();
 
@@ -71,6 +71,11 @@ public class Programacion2Laboratorio4 {
             if (ingenieros.get(i).getNombreusuario().equals(usuario1)) {
                 if (ingenieros.get(i).getContraseña().equals(contraseña)) {
                     opcionesingeniero(i);
+                    if(inge.cafe()==true){
+                   int x= ingenieros.get(i).getCafe();
+                   ingenieros.get(i).setCafe(x-1);
+                    }
+                    
                 } else {
                     JOptionPane.showMessageDialog(null, "datos incorectos");
                 }

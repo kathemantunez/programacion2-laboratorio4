@@ -71,8 +71,9 @@ public abstract class SeresVivos {
     public String toString() {
         return "SeresVivos{" + "nombre=" + nombre + ", gruposangre=" + gruposangre + ", sexo=" + sexo + ", altura=" + altura + ", peso=" + peso + '}';
     }
-     public abstract void cafe();
-     
+    
+     public abstract boolean cafe();
+      public abstract void comida();
     
 }
 
