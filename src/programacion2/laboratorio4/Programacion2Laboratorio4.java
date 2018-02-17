@@ -536,7 +536,7 @@ public class Programacion2Laboratorio4 {
         int p = Integer.parseInt(JOptionPane.showInputDialog(cadena + "Escoja medio de transporte para el viaje:"));
         cola.Queue(Transportes.get(p-1));
         String c=cola.Peek();
-        JOptionPane.showMessageDialog(null,c);
+        JOptionPane.showMessageDialog(null,"el ultimo viaje fue"+c);
         
         
 //         
