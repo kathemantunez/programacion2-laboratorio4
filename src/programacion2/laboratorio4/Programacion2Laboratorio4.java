@@ -71,7 +71,7 @@ public class Programacion2Laboratorio4 {
             if (ingenieros.get(i).getNombreusuario().equals(usuario1)) {
                 if (ingenieros.get(i).getContraseña().equals(contraseña)) {
                     opcionesingeniero(i);
-                    if(inge.cafe()==true){
+                    if(inge.cafe()==false){
                    int x= ingenieros.get(i).getCafe();
                    ingenieros.get(i).setCafe(x-1);
                     }

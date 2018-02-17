@@ -98,6 +98,7 @@ public class Ingenieros extends SeresVivos{
            cafe=cafe;
           x=true;
        }
+       cafe=cafe-1;
        return x;
     }
 

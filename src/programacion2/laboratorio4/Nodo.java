@@ -12,7 +12,6 @@ package programacion2.laboratorio4;
 public class Nodo {
     private Object value;
    private Nodo siguiente;
-   private Nodo head=null;
 
     public Nodo() {
     }
