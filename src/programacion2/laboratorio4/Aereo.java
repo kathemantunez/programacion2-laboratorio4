@@ -53,9 +53,7 @@ public class Aereo extends MediosdeTransporte{
         return "Aereo{" + "Gasolina=" + Gasolina + ", PaisdePartida=" + PaisdePartida + ", PaisdeLlegada=" + PaisdeLlegada + '}';
     }
 
-    @Override
-    public void combustibles() {  throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
     
     
 }

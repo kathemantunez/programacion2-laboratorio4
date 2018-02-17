@@ -17,8 +17,9 @@ public class Programacion2Laboratorio4 {
     static ArrayList<MediosdeTransporte> Transportes = new ArrayList();
     static Aereo aereo = new Aereo();
     static ArrayList<Primates> primate = new ArrayList();
-    static Mono_Baboon mono = new Mono_Baboon();
-    Queue<Integer> cola = new LinkedList();
+
+    static Cola cola=new Cola();
+    static viajes viaje=new viajes();
 
     /**
      * @param args the command line arguments
@@ -532,7 +533,14 @@ public class Programacion2Laboratorio4 {
             cadena += c2 + ")" + Transportes.get(i) + "\n";
             c2++;
         }
-        int opcion = Integer.parseInt(JOptionPane.showInputDialog(cadena + "Escoja medio de transporte:"));
-
+        int p = Integer.parseInt(JOptionPane.showInputDialog(cadena + "Escoja medio de transporte para el viaje:"));
+        cola.Queue(Transportes.get(p-1));
+        String c=cola.Peek();
+        JOptionPane.showMessageDialog(null,c);
+        
+        
+//         
+            
+        
     }
 }

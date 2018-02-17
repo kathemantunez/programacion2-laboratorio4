@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author Asus
  */
-public abstract class MediosdeTransporte {
+public  class MediosdeTransporte {
     private String Tanque;
     private String Distancia; 
     private String Altitud;
@@ -62,7 +62,7 @@ public abstract class MediosdeTransporte {
     public String toString() {
         return "MediosdeTransporte{" + "Tanque=" + Tanque + ", Distancia=" + Distancia + ", Altitud=" + Altitud + ", Primates=" + Primates + '}';
     }
-    public abstract void combustibles();
+
 }
 
 
