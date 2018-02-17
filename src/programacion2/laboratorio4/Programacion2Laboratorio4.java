@@ -166,9 +166,9 @@ public class Programacion2Laboratorio4 {
                         } else if (Tipo == 2) {
                             String pasajeros = JOptionPane.showInputDialog("Numero de Pasajeros:");
                             String piloto = "";
-
-                            Menu3 = JOptionPane.showInputDialog("Funciona el piloto automatico?");
-
+                            do {
+                                Menu3 = JOptionPane.showInputDialog("Funciona el piloto automatico?");
+                            } while (!Menu3.equalsIgnoreCase("si") || !Menu3.equalsIgnoreCase("no"));
                             if (Menu3.equalsIgnoreCase("si")) {
                                 piloto = "SI";
                             } else if (Menu3.equalsIgnoreCase("no")) {
@@ -234,7 +234,7 @@ public class Programacion2Laboratorio4 {
                     }
                     JOptionPane.showMessageDialog(null, cadena1);
                     break;
-
+                    
                 case "c":
                     String cadena = "";
                     int c = 1;
@@ -244,121 +244,11 @@ public class Programacion2Laboratorio4 {
                         c++;
                     }
                     int p = Integer.parseInt(JOptionPane.showInputDialog(cadena + "Escoja Transporte para modificar: "));
-                    if (Transportes.get(p - 1) instanceof Helicoptero) {
-                        do {
-                            String op = JOptionPane.showInputDialog("Tipo de Gasolina.\n"
-                                    + "a. Super\n"
-                                    + "b. Regular\n"
-                                    + "c. Diesel\n");
-                            if (op.equalsIgnoreCase("a")) {
-                                ((Helicoptero) Transportes.get(p - 1)).setGasolina("Super");
-                            } else if (op.equalsIgnoreCase("b")) {
-                                ((Helicoptero) Transportes.get(p - 1)).setGasolina("Regular");
-                            } else if (op.equalsIgnoreCase("c")) {
-                                ((Helicoptero) Transportes.get(p - 1)).setGasolina("Diesel");
-                            }
-                        } while (gasolina.equals(""));
-                        String helices = JOptionPane.showInputDialog("Helices:");
-                        ((Helicoptero) Transportes.get(p - 1)).setHelices(helices);
-                        String patas = JOptionPane.showInputDialog("Patas:");
-                        ((Helicoptero) Transportes.get(p - 1)).setPatas(patas);
-                        String partida = JOptionPane.showInputDialog("Pais de partida:");
-                        ((Helicoptero) Transportes.get(p - 1)).setPaisdePartida(partida);
-                        String llegada = JOptionPane.showInputDialog("Pais de llegada:");
-                        ((Helicoptero) Transportes.get(p - 1)).setPaisdeLlegada(llegada);
-                        ((Helicoptero) Transportes.get(p - 1)).setTanque("Lleno");
-                        String distancia = JOptionPane.showInputDialog("Distancia que recorre con tanque lleno:");
-                        ((Helicoptero) Transportes.get(p - 1)).setDistancia(distancia);
-                        String altitud = JOptionPane.showInputDialog("Altitud:");
-                        ((Helicoptero) Transportes.get(p - 1)).setAltitud(altitud);
-                    } else if (Transportes.get(p - 1) instanceof Avion) {
-                        do {
-                            String op = JOptionPane.showInputDialog("Tipo de Gasolina.\n"
-                                    + "a. Super\n"
-                                    + "b. Regular\n"
-                                    + "c. Diesel\n");
-                            if (op.equalsIgnoreCase("a")) {
-                                ((Avion) Transportes.get(p - 1)).setGasolina("Super");
-                            } else if (op.equalsIgnoreCase("b")) {
-                                ((Avion) Transportes.get(p - 1)).setGasolina("Regular");
-                            } else if (op.equalsIgnoreCase("c")) {
-                                ((Avion) Transportes.get(p - 1)).setGasolina("Diesel");
-                            }
-                        } while (gasolina.equals(""));
-                        String pasajero = JOptionPane.showInputDialog("Pasajeros:");
-                        ((Avion) Transportes.get(p - 1)).setPasajeros(pasajero);
-                        String piloto = "";
-
-                        Menu3 = JOptionPane.showInputDialog("Funciona el piloto automatico?");
-
-                        if (Menu3.equalsIgnoreCase("si")) {
-                            ((Avion) Transportes.get(p - 1)).setPilotoAutomatico("SI");
-                        } else if (Menu3.equalsIgnoreCase("no")) {
-                            ((Avion) Transportes.get(p - 1)).setPilotoAutomatico("NO");
-                        }
-                        String partida = JOptionPane.showInputDialog("Pais de partida:");
-                        ((Avion) Transportes.get(p - 1)).setPaisdePartida(partida);
-                        String llegada = JOptionPane.showInputDialog("Pais de llegada:");
-                        ((Avion) Transportes.get(p - 1)).setPaisdeLlegada(llegada);
-                        ((Avion) Transportes.get(p - 1)).setTanque("Lleno");
-                        String distancia = JOptionPane.showInputDialog("Distancia que recorre con tanque lleno:");
-                        ((Avion) Transportes.get(p - 1)).setDistancia(distancia);
-                        String altitud = JOptionPane.showInputDialog("Altitud:");
-                        ((Avion) Transportes.get(p - 1)).setAltitud(altitud);
-                    } else if (Transportes.get(p - 1) instanceof Nave) {
-                        do {
-                            Menu3 = JOptionPane.showInputDialog("Tipo de Gasolina.\n"
-                                    + "a. Quimico\n"
-                                    + "b. Solido\n"
-                                    + "c. Propelente Liquido\n");
-                            if (Menu3.equalsIgnoreCase("a")) {
-                                ((Nave) Transportes.get(p - 1)).setCombustible("Quimico");
-                            } else if (Menu3.equalsIgnoreCase("b")) {
-                                ((Nave) Transportes.get(p - 1)).setCombustible("Solido");
-                            } else if (Menu3.equalsIgnoreCase("c")) {
-                                ((Nave) Transportes.get(p - 1)).setCombustible("Propelente Liquido");
-                            }
-                        } while (gasolina.equals(""));
-                        String propulsores = JOptionPane.showInputDialog("Numero de propulsores:");
-                        ((Nave) Transportes.get(p - 1)).setAltitud(propulsores);
-                        String partida = JOptionPane.showInputDialog("Planeta de partida:");
-                        ((Nave) Transportes.get(p - 1)).setPlanetadePartida(partida);
-                        String llegada = JOptionPane.showInputDialog("Planeta de llegada:");
-                        ((Nave) Transportes.get(p - 1)).setPanetadeLlegada(llegada);
-                    } else if (Transportes.get(p - 1) instanceof Cohete) {
-                        do {
-                            Menu3 = JOptionPane.showInputDialog("Tipo de Gasolina.\n"
-                                    + "a. Quimico\n"
-                                    + "b. Solido\n"
-                                    + "c. Propelente Liquido\n");
-                            if (Menu3.equalsIgnoreCase("a")) {
-                                ((Cohete) Transportes.get(p - 1)).setCombustible("Quimico");
-                            } else if (Menu3.equalsIgnoreCase("b")) {
-                                ((Cohete) Transportes.get(p - 1)).setCombustible("Solido");
-                            } else if (Menu3.equalsIgnoreCase("c")) {
-                                ((Cohete) Transportes.get(p - 1)).setCombustible("Propelente Liquido");
-                            }
-                        } while (gasolina.equals(""));
-                        String separaciones = JOptionPane.showInputDialog("Numero de separaciones:");
-                        ((Cohete) Transportes.get(p - 1)).setSeparaciones(separaciones);
-                        String partida = JOptionPane.showInputDialog("Planeta de partida:");
-                        ((Cohete) Transportes.get(p - 1)).setPlanetadePartida(partida);
-                        String llegada = JOptionPane.showInputDialog("Planeta de llegada:");
-                        ((Cohete) Transportes.get(p - 1)).setPanetadeLlegada(llegada);
-                    }
+                    
                     break;
-                case "d":
-                    String cadena2 = "";
-                    int c2 = 1;
-                    for (int i = 0; i < Transportes.size(); i++) {
 
-                        cadena2 += c2 + ")" + Transportes.get(i) + "\n";
-                        c2++;
-                    }
-                    int p2 = Integer.parseInt(JOptionPane.showInputDialog(cadena2 + "Escoja transporte para eliminar"));
-                    Transportes.remove(p2 - 1);
-                    break;
             }
+
         } while (!menu.equalsIgnoreCase("e"));
     }
 
@@ -533,6 +423,7 @@ public class Programacion2Laboratorio4 {
             cadena += c2 + ")" + Transportes.get(i) + "\n";
             c2++;
         }
+        
         int p = Integer.parseInt(JOptionPane.showInputDialog(cadena + "Escoja medio de transporte para el viaje:"));
         cola.Queue(Transportes.get(p-1));
         String c=cola.Peek();
