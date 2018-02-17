@@ -73,7 +73,6 @@ public abstract class SeresVivos {
     }
      public abstract void cafe();
      
-     public abstract void comida();
     
 }
 

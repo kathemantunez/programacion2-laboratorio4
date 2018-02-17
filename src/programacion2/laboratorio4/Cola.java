@@ -54,13 +54,14 @@ public class Cola {
         for (int i = 0; i < Transportes.size(); i++) {
               if(i==Transportes.size()-1){
             cadena +=  Transportes.get(i) ;
-            
-        }
+              }
+//        
         }
         return cadena;
     }
-    public void getsize(){
-        
+    public int getsize(){
+        int size=viaje.size();
+        return size;
     }
     
     
